@@ -1,0 +1,15 @@
+.read {
+
+    border: 1px solid transparent;
+    padding: 5px;
+    pointer-events: none;
+    
+}
+.edit {
+    border:1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+.btnEdit {
+    width: 71px;
+}
