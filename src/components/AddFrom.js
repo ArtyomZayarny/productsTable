@@ -16,6 +16,7 @@ const AddForm = ({addProduct}) => {
     })
  
     const options = useContext(MyContext);
+
     const handleChange = (name, value ) => {
         setError({...isError, name:'',price:'',category:''})
         switch (name) {
@@ -28,11 +29,11 @@ const AddForm = ({addProduct}) => {
         default:return false;
         }
     }
+    
     const handleSelect = (e,data) => {
         setCategory(data.value)
     }
 
-    
 
     const checkFields = (fields) => {      
         let obj = {};

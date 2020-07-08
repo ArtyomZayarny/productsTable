@@ -23,13 +23,13 @@ function App() {
     let updateProducts = data.products.filter( (item) => item.id !== id)
     setData({...data, products:updateProducts })
   }
-  const addProduct = useCallback(
-    (value) => {    
+  const addProduct = useCallback((value) => {    
       setData({...data, showModal:false})
-      let  products = data.products;
-      products.push(value);
-      setData({...data, products:products})
-    },[]);
+      let  updateProducts = [...data.products];
+      updateProducts.push(value);
+      setData({...data, products:updateProducts})
+    },[data.products]);
+
     const closeModal = () => {  
         setData({...data,showModal:false})
     }
